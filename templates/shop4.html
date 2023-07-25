@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shops</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style1.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1> Shop-4</h1>
+        <h3>Address: Bhupindra Rd, Patiala, Punjab 147001 </h3>
+        <h3>Contact No. 9888844441:</h3>
+        <h3>Opening Time : 08:30</h3>
+        <h3>Closing Time : 20:00</h3>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Items Available</th>
+                    <th scope="col">Quantity Available</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in d %}
+
+                <tr>
+                    <td>{{row["Items"]}}</td>
+                    <td>{{row["Qty"]}}</td>
+
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+        <h5>Place your order here</h5>
+        <div class="input-group">
+            <span class="input-group-text">signed in as {{name}}</span>
+            <input type="text" aria-label="First name" class="form-control">
+            <input type="text" aria-label="Last name" class="form-control">
+        </div>
+        <form id="shop1" action="/order/shop4" method="post">
+            <div class="input-group mb-3">
+
+                <label class="input-group-text" for="inputGroupSelect01">Items</label>
+                <select class="form-select" id="option" name="option">
+                    <option selected>Choose...</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Sugar">Sugar</option>
+                    <option value="Flour">Flour</option>
+                    <option value="Kerosene">Kerosene</option>
+                    <option value="Moong Dal">Moong Dal</option>
+                    <option value="Chana Dal">Chana Dal</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Quantity</span>
+                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" id="qty" name="qty">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Place Order</button>
+            </div>
+        </form>
+    </body>
+</html>

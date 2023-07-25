@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Ration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/html5rest.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/col.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/9cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/8cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/7cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/6cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/5cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/4cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/2cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/3cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/12cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/10cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/11cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                    <img class="logo" src="{{ url_for('static',filename='logo2.png') }}" alt="logo-img">
+                    <ul class="main-nav">
+                        <li> <a href = "/pendingorders">Pending Orders</a></li>
+                        <li> <a href="#update-stock">Update Stock </a></li>
+                        <li> <a href="/logout/shop">Log out</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>Welcome {{name}} </h1>
+            </div>
+        </header>
+        <br>
+        <h3>Update stock items</h3>
+        <br>
+        <form id="update_stock" action="/shopkeeper" method="post">
+            <div id="update-stock">
+                <select class="form-select" aria-label="Default select example" id="stock" name="stock">
+                    <option selected>Select Items</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Flour">Flour</option>
+                    <option value="Kerosene">Kerosene</option>
+                    <option value="Sugar">Sugar</option>
+                    <option value="Moong Dal">Moong Dal</option>
+                    <option value="Chana Dal">Chana Dal</option>
+                </select>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default"><br>Quantity</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="qty" name="qty">
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <br>
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                    <div class="col-12">
+                        <br><button class="btn btn-primary" type="submit" name="stock" value="stock">Update Stock</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+</body>
+        

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Ration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/html5rest.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/col.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/9cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/8cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/7cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/6cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/5cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/4cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/2cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/3cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/12cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/10cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/11cols.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                    <img class="logo" src="{{ url_for('static',filename='logo2.png') }}" alt="logo-img">
+                    <ul class="main-nav">
+                        <li> <a href="#section-city">Place Order</a></li>
+                        <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdUZsyfeKiNCrWeQlHNLQOaallUYu_Nb51nMJyPWB7bIGgfXA/viewform?usp=sf_link">Feedback Form </a></li>
+                        <li><a href="/orderhistory">Order History</a>
+                        <li> <a href="/logout">Log out</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="hero-text-box">
+                <h1>
+                    One Nation<br> One Ration Card<br><br><br>
+                    Welcome {{name}}
+                </h1>
+            </div>
+        </header>
+        <section class="section-cities" id= "section-city">
+            <div class="row">
+                <h2>Ration shops available</h2>
+            </div>
+            <div class="row">
+                <div class="col span_1_of_4 box">
+                    <img src="{{ url_for('static',filename='shop1.jpeg') }}" alt="shop-image">
+                    <a href="/order/shop1">Shop-1</a>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="person-add"></ion-icon>
+                         200+ customers
+                    </div>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="star"></ion-icon>
+                        4.5 Rating
+                    </div>
+                </div>
+                <div class="col span_2_of_4 box">
+                    <img src="{{ url_for('static',filename='shop2.jpeg') }}" alt="shop-image">
+                    <a href="/order/shop2">Shop-2</a>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="person-add"></ion-icon>
+                         100+ customers
+                    </div>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="star"></ion-icon>
+                        4 Rating
+                    </div>
+                </div>
+                <div class="col span_3_of_4 box">
+                    <img src="{{ url_for('static',filename='shop3.jpeg') }}" alt="shop-image">
+                    <a href="/order/shop3">Shop-3</a>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="person-add"></ion-icon>
+                         250+ customers
+                    </div>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="star"></ion-icon>
+                        4.4 Rating
+                    </div>
+                </div>
+                <div class="col span_4_of_4 box">
+                    <img src="{{ url_for('static',filename='shop4.jpeg') }}" alt="shop-image">
+                    <a href="/order/shop4">Shop-4</a>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="person-add"></ion-icon>
+                         130+ customers
+                    </div>
+                    <div class="city-feature">
+                        <ion-icon class="icon-small" name="star"></ion-icon>
+                        4.6 Rating
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

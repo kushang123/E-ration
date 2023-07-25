@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/dev.css') }}">
+    <title>Developers</title>
+</head>
+<body>
+<section class="teams" id="teams">
+    <div class="max-width">
+        <h2 class="title">Creators</h2>
+        <div class="carousel owl-carousel">
+            <div class="card">
+                <div class="box">
+                    <img src="{{url_for('static',filename='Img1.jpg') }}">
+                    <div class="text">Akshat Singla</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{{url_for('static',filename='Img4.jpg') }}">
+                    <div class="text">Khushi Thapar</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{{url_for('static',filename='Img2.jpg') }}">
+                    <div class="text">Kushang Garg</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{{url_for('static',filename='Img3.jpg') }}">
+                    <div class="text">Shagun Sharma</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
